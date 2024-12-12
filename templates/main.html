@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CoPulse - Transforming Health, One Pulse at a Time</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleCoPulse.css') }}">
+  <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Website Title -->
+
+  <div class="container" >
+       <img src="static/backgroundImg.jpg" alt="" style="float: right;" />
+    </div>
+  </div>
+
+  <!-- Text Area -->
+  <div class="ml-container">
+    <form action="{{ url_for('predict')}}" method="POST"> 
+
+  <hr>
+      <p>Manual Entry below</p>
+      <label for="thalach">Enter Max Heart Rate</label>
+      <input type="text" id="thalach" name="thalach" placeholder ='Enter Heart Rate' placeholder="A number in range [71-202] bpm"><br>
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" placeholder="Your age.." value="23"><br>
+        <label for="sex">Sex</label>
+        <select id="sex" name="sex">
+          
+          <option value="1">Male</option>
+          <option value="0" selected>Female</option>
+        </select><br>
+        <label for="cp">Chest Pain Type</label>
+        <select id="cp" name="cp">
+<option value="0" selected>Typical Angina</option>
+          <option value="1">Atypical Angina</option>
+          <option value="2">Non-anginal Pain</option>
+          <option value="3">Asymtomatic</option>
+        </select><br>
+        <label for="trestbps">Resting Blood Pressure</label>
+        <input type="text" id="trestbps" name="trestbps" placeholder="A number in range [94-200] mmHg"><br>
+
+        <label for="chol">Serum Cholesterol</label>
+        <input type="text" id="chol" name="chol" placeholder="A number in range [126-564] mg/dl" value="220"><br>
+        <label for="fbs">Fasting Blood Sugar</label>
+        <select id="fbs" name="fbs">
+          <option value="1" selected>Greater than 120 mg/dl</option>
+          <option value="0">Less than 120 mg/dl</option>
+        </select><br>
+        <label for="restecg">Resting ECG Results</label>
+        <select id="restecg" name="restecg">
+          <option value="1" selected>Having ST-T wave abnormality</option>
+          <option value="2">Probable or definite left ventricular
+            hypertrophy</option>
+        </select><br>
+        <label for="exang">Exercise-induced Angina</label>
+        <select id="exang" name="exang">
+          <option value="1" selected>Yes</option>
+          <option value="0">No</option>
+        </select><br>
+
+
+        <label for="oldpeak">ST depression</label>
+        <input type="text" id="oldpeak" name="oldpeak" placeholder="ST depression, typically in [0-6.2]"><br>
+
+
+
+        <label for="slope">slope of the peak exercise ST segment</label>
+        <select id="slope" name="slope">
+          <option value="0" selected>Upsloping</option>
+          <option value="1">Flat</option>
+          <option value="2">Downsloping</option>
+        </select><br>
+        
+
+        <label for="ca">Number of Major vessels</label>
+        <input type="text" id="ca" name="ca" placeholder="Typically in [0-4]"><br> 
+                          
+
+
+        <label for="thal">Thalassemia</label> 
+        <select id="thal" name="thal">
+          <option value="0" selected>Normal</option>
+          <option value="1">Fixed Defect</option> 
+          <option value="2">Reversible Defect</option>  
+        </select><br>
+
+      
+
+      <input type="submit" class="my-cta-button" value="Predict">
+    </form>
+  </div>
+</body>
+
+</html>

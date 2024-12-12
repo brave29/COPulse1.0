@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Heart Disease Predictor</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styleCoPulse.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+  <div class="container" >
+       <img src="static/backgroundImg.jpg" alt="" style="float: right;" />
+    </div>
+  </div>
+
+		<!-- Result -->
+		<div class="results">
+		
+			{% if prediction==1 %}
+			    
+
+				<h2>Prediction: <span class='danger'>WARNING ZONE - Please consult with physician ASAP.</span></h2>
+				
+			{% elif prediction==0 %}
+				<h2>Prediction: <span class='safe'>HEALTHY ZONE - You seem to be in clear, however, it is always recommended to check with your physician for checkup.</span></h2>
+				
+			{% endif %}
+		</div>
+
+		<!-- Footer --> gd
+       <div class='footer'>
+           <p class='footer-description'>COPulse - we are here for you !!!!</p>
+       </div>
+
+	</body>
+</html>

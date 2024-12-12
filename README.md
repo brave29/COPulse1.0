@@ -28,7 +28,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### Credit
+### Credit Source
  Credit: This script is based on and inspired by the work in the repository  
  https://github.com/asthasharma98/Heart-Disease-Prediction-Deployment.git  
  The html input form is also derived from the initial version of this project.
